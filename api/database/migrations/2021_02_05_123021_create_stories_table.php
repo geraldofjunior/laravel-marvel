@@ -17,6 +17,7 @@ class CreateStoriesTable extends Migration
             $table->id('id');
             $table->string('name');
             $table->string('type');
+            $table->bigInteger('character');
             $table->timestamps();
         });
     }

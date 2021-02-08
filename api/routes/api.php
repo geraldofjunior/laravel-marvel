@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\CharactersController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/user', function(Request $request) {
     return $request->user();
 });
+
+Route::get('characters', [CharactersController::class, 'index']);
+Route::get('characters/{characterId}', [CharactersController::class, 'showCharacter']);
+Route::get('characters/{characterId}/comics', [CharactersController::class, 'showCharacterComics']);
+Route::get('characters/{characterId}/events', [CharactersController::class, 'showCharacterEvents']);
+Route::get('characters/{characterId}/series', [CharactersController::class, 'showCharacterSeries']);
+Route::get('characters/{characterId}/stories', [CharactersController::class, 'showCharacterStories']);
