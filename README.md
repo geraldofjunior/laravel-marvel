@@ -1,7 +1,7 @@
 # Laravel-marvel
 
 Este projeto é uma implementação de parte da API da Marvel, escrito em Laravel.
-d
+
 ## Instalação
 ### Pré-requisitos
 Verifique se os seguintes itens estão instalados em seu sistema:
