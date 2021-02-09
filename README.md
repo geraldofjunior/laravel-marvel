@@ -26,9 +26,13 @@ Depois disso, rode:
 
     php artisan migrate:fresh —seed
 
-Isso vai criar todas as tabelas e gerar os dados da aplicação.
+Isso vai criar todas as tabelas e gerar os dados da aplicação. Logo após, rode:
+
+    php artisan key:generate
 
 ### Uso
 Depois de instalado, basta entrar na pasta api e executar:
 
     php artisan serve
+
+E aí use a sua plataforma de consumo de APIs (Insomnia, por exemplo), mandando as requisições para http://localhost:8000/api. 
